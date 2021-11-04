@@ -7,8 +7,9 @@
 #include <limits.h>
 
 /**
- * main - Entry point
+ * _printf - Printf equivalent
  *
+ * @format: The first string, containst conversion statements
  * Return: Always 0
  */
 
@@ -17,21 +18,23 @@ int _printf(const char *format, ...)
 	int len, i, j;
 	char *prnt;
 	char c;
-	va_list f, n;
+	va_list f;
 
 	len = 0;
-	va_start(f, char *);
+	va_start(f, format);
 	/* va_start(n, int); */
 
 	if (format == NULL)
-		return;
+		exit(98);
+
+
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			i += 2;
-			c = va_arg(f, char *);
+			c = va_arg(f, int);
 			_putchar(c);
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
@@ -51,5 +54,5 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 	}
 	return (0);
-	va_end(f, char *);
+	va_end(f);
 }
