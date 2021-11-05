@@ -5,7 +5,7 @@
 #include <stdarg.h>
 
 /**
- * _prnthex - Converts and prints a hexadecimal number.
+ * _prntcaphex - Converts and prints a hexadecimal number.
  *
  * @args: The argument list passed from _printf.
  * Return: The length of the hex.
@@ -34,7 +34,7 @@ int _prntcaphex(va_list *args)
 }
 
 /**
- * _prntcaphex - Converts and prints a hexadecimal number with capital chars.
+ * _prnthex - Converts and prints a hexadecimal number with capital chars.
  *
  * @args: The argument list passed from _printf.
  * Return: The length of the hex.
