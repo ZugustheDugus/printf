@@ -23,8 +23,6 @@ DESCRIPTION
 %o: Octal integer (unsigned)
 %p: Address in hexidecimal
 %%: Prints '%' normally
-\n: Prints newline
-\\: Prints '\' normally
 
 Otherwise, the command simply prints whatever string is directly written into it
 within double quotation marks.
